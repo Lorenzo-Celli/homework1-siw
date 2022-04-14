@@ -1,4 +1,4 @@
-package siw.homework.module;
+package siw.homework1.main;
 
 public class CorsoFormazioneMain {
 
