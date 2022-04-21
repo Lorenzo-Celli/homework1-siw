@@ -18,20 +18,48 @@ public class Allievo {
 	
 	@Id 
 	private String matricola;
-	@Column 
 	private String nome;
-	@Column 
 	private String cognome;
-	@Column 
 	private Date dataNascita;
-	@Column 
 	private String luogoNascita;
-	@Column
 	private String email;
 	@ManyToMany
 	private List<Corso> corso;
 	@ManyToOne
 	private Societa società;
+	public String getNome() {
+		return nome;
+		
+		
+	}
+	public void setNome(String nome) {
+		this.nome = nome;
+	}
+	public String getCognome() {
+		return cognome;
+	}
+	public void setCognome(String cognome) {
+		this.cognome = cognome;
+	}
+	public Date getDataNascita() {
+		return dataNascita;
+	}
+	public void setDataNascita(Date dataNascita) {
+		this.dataNascita = dataNascita;
+	}
+	public String getLuogoNascita() {
+		return luogoNascita;
+	}
+	public void setLuogoNascita(String luogoNascita) {
+		this.luogoNascita = luogoNascita;
+	}
+	public String getEmail() {
+		return email;
+	}
+	public void setEmail(String email) {
+		this.email = email;
+	}
+	
 	
 
 }

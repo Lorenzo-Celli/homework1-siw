@@ -15,15 +15,35 @@ public class Societa {
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	private Long id;
-	@Column 
 	private String ragioneSociale;
-	@Column 
-	private String indirizzo;
-	@Column 
 	private String telefono;
 	@OneToMany
 	@JoinColumn(name = "società_id")
 	private List<Allievo> allievo;
+	@OneToOne
+	private Indirizzo indirizzo;
+	
+	
+	
+	public Indirizzo getIndirizzo() {
+		return indirizzo;
+	}
+	public void setIndirizzo(Indirizzo indirizzo) {
+		this.indirizzo = indirizzo;
+	}
+	public String getRagioneSociale() {
+		return ragioneSociale;
+	}
+	public void setRagioneSociale(String ragioneSociale) {
+		this.ragioneSociale = ragioneSociale;
+	}
+	public String getTelefono() {
+		return telefono;
+	}
+	public void setTelefono(String telefono) {
+		this.telefono = telefono;
+	}
+	
 	
 	
 }

@@ -18,15 +18,32 @@ public class Corso {
 	@Id 
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	private Long id;
-	@Column
 	private String nome;
-	@Column
 	private Date dataInizio;
-	@Column 
 	private int durataCorso;
 	@ManyToOne
 	private Docente docente;
 	@ManyToMany(mappedBy = "corso")	
 	private List<Allievo> allievo;
+	public String getNome() {
+		return nome;
+	}
+	public void setNome(String nome) {
+		this.nome = nome;
+	}
+	public Date getDataInizio() {
+		return dataInizio;
+	}
+	public void setDataInizio(Date dataInizio) {
+		this.dataInizio = dataInizio;
+	}
+	public int getDurataCorso() {
+		return durataCorso;
+	}
+	public void setDurataCorso(int durataCorso) {
+		this.durataCorso = durataCorso;
+	}
 	
+	
+
 }

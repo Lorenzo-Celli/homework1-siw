@@ -15,19 +15,46 @@ public class Docente {
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	private Long id;
-	@Column
 	private String nome;
-	@Column
 	private String cognome;
-	@Column
 	private Date dataNascita;
-	@Column 
 	private String  luogoNascita;
-	@Column 
 	private String partitaIva;
 	@OneToMany
 	@JoinColumn(name = "docente_id")
 	private List<Corso> corsi;
+	
+	public String getNome() {
+		return nome;
+	}
+	public void setNome(String nome) {
+		this.nome = nome;
+	}
+	public String getCognome() {
+		return cognome;
+	}
+	public void setCognome(String cognome) {
+		this.cognome = cognome;
+	}
+	public Date getDataNascita() {
+		return dataNascita;
+	}
+	public void setDataNascita(Date dataNascita) {
+		this.dataNascita = dataNascita;
+	}
+	public String getLuogoNascita() {
+		return luogoNascita;
+	}
+	public void setLuogoNascita(String luogoNascita) {
+		this.luogoNascita = luogoNascita;
+	}
+	public String getPartitaIva() {
+		return partitaIva;
+	}
+	public void setPartitaIva(String partitaIva) {
+		this.partitaIva = partitaIva;
+	}
+	
 	
 	
 }
